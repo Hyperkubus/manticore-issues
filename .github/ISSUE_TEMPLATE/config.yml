@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Tester Manual
+    url: https://hyperkubus.github.io/manticore/
+    about: Read the walkthrough — controls, mechanics, mission types, and what to look for.

@@ -1,0 +1,23 @@
+name: Feature Request / Idea
+description: Something you wanted to do but couldn't, or an idea for the game.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome this early — the sooner we hear them, the easier to plan for (or consciously decide against). No idea is too small or too wild.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+      description: What do you want to be able to do?
+      placeholder: e.g. "I'd love to be able to save a marked location and name it, so I can track suspected drop points across missions."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why? What problem does it solve?
+      description: What were you trying to do when you wished for this?
+    validations:
+      required: false

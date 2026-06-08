@@ -1,0 +1,37 @@
+name: Feedback
+description: Confusion, things that felt off, or observations about how it plays.
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most valuable kind of report at this stage. Tell us how it felt to play.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - I was confused / didn't know what to do
+        - Something felt off (too fast, too slow, too easy, too hard)
+        - An observation about how it plays
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Tell us about it
+      description: What happened, what you were trying to do, and how it felt.
+      placeholder: |
+        e.g. "I didn't realise I had to cut engines to go stealthy — I kept burning
+        and patrols spotted me from across the system. Once I figured out the coast
+        trick it clicked, but the game never told me."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: What were you doing?
+      description: Which mission, which part of the game, what was on screen.
+    validations:
+      required: false

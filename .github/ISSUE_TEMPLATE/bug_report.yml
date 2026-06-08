@@ -1,0 +1,60 @@
+name: Bug Report
+description: Something broke, glitched, crashed, or behaved wrong.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Manticore. Don't worry about perfect formatting — a rough description beats no report.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug. What did you see?
+      placeholder: e.g. "When I cancelled a burn near Mars, my ship jumped to the other side of the system."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: e.g. "The ship should coast smoothly into an orbit."
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we make it happen again? Even a rough sequence helps.
+      placeholder: |
+        1. Undock from Ceres Station
+        2. Set course to Jupiter Gateway
+        3. Cancel course after ~1 hour
+        4. Ship teleports
+    validations:
+      required: false
+  - type: input
+    id: build
+    attributes:
+      label: Build / Steam branch
+      description: Which version were you on? (nightly is the default beta branch)
+      placeholder: nightly
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - Linux
+        - Other / not sure
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: Drag images here. Logs, weird numbers, whatever you've got.
+    validations:
+      required: false
