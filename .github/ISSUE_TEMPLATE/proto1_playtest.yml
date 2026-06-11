@@ -1,0 +1,111 @@
+name: Prototype 1 playtest report
+description: Structured verdict for the redesign-beta prototype ("The Shack and The Plot"). One report per playtest session.
+labels: ["playtest", "prototype-1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You played the **redesign** Steam beta — the sensor-station prototype. This form mirrors
+        the protocol in the build's PLAYTEST.md. Honest beats polite; "it bored me" is useful data.
+  - type: input
+    id: patrols
+    attributes:
+      label: How many patrols did you play, and to what end?
+      placeholder: e.g. "2 patrols, filed reports on both; won one"
+    validations:
+      required: true
+  - type: dropdown
+    id: earned
+    attributes:
+      label: Did committing a solution feel EARNED (vs guessed)?
+      options:
+        - "5 — every commit felt like craft"
+        - "4"
+        - "3 — mixed"
+        - "2"
+        - "1 — felt like guessing"
+    validations:
+      required: true
+  - type: dropdown
+    id: interface
+    attributes:
+      label: Which did you reach for when fitting tracks?
+      options:
+        - Mostly the graphical fit (dragging handles)
+        - Mostly the numbers panel (typing parameters)
+        - Both, depending on situation
+        - Neither really clicked
+    validations:
+      required: true
+  - type: textarea
+    id: aha
+    attributes:
+      label: Was there a moment of genuine "aha"? What triggered it?
+      placeholder: e.g. "When the green dots refused to sit on my track until I changed the class — then everything agreed at once."
+    validations:
+      required: false
+  - type: textarea
+    id: friction
+    attributes:
+      label: Where was the friction NOT interesting? (UI pain vs honest difficulty)
+    validations:
+      required: false
+  - type: dropdown
+    id: burned
+    attributes:
+      label: Did you ever burn for geometry (maneuver to improve a solution)?
+      options:
+        - Yes, and it visibly helped
+        - Yes, but I couldn't tell if it helped
+        - No — never occurred to me
+        - No — didn't want to pay the signature
+    validations:
+      required: true
+  - type: textarea
+    id: how-found
+    attributes:
+      label: How did you find the covert ship?
+      description: Spectrum mismatch? Range/intensity inconsistency? Behavior (rendezvous, speed, route)? Luck?
+    validations:
+      required: true
+  - type: input
+    id: time-to-suspicion
+    attributes:
+      label: How long (wall clock) until first suspicion? Until confidence?
+      placeholder: e.g. "suspicion ~10 min, confidence ~25 min"
+    validations:
+      required: false
+  - type: dropdown
+    id: band
+    attributes:
+      label: The band check — finding her was…
+      options:
+        - Too obvious (no real doubt at any point)
+        - "In the band: real doubt, resolvable by effort"
+        - Too hidden (felt like guessing even at the end)
+    validations:
+      required: true
+  - type: dropdown
+    id: rendezvous
+    attributes:
+      label: Did the rendezvous read as an event?
+      options:
+        - Yes — I saw the traces merge/split and understood it
+        - I saw something but didn't know what it meant
+        - Passed me by completely
+        - Never looked at the right place/time
+    validations:
+      required: true
+  - type: textarea
+    id: one-change
+    attributes:
+      label: The ONE change that would most improve the loop?
+    validations:
+      required: true
+  - type: textarea
+    id: tuning
+    attributes:
+      label: Tuning notes (optional)
+      description: Time-compression feel, bearing noise (alive vs smeared), contact count on the waterfall, anything numeric.
+    validations:
+      required: false
